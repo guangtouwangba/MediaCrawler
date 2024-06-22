@@ -1,8 +1,15 @@
+from enum import Enum
+
 from pydantic import BaseModel
 
 import config
 from main import CrawlerFactory
 from recv_sms import app
+
+
+class SearchType(Enum):
+    XHS = "xhs"
+    DOUYIN = ""
 
 
 class SearchRequest(BaseModel):
